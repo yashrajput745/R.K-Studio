@@ -6,6 +6,7 @@ import gallery3 from "@/assets/gallery-3.jpg";
 import gallery4 from "@/assets/gallery-4.jpg";
 import gallery5 from "@/assets/gallery-5.jpg";
 import gallery6 from "@/assets/gallery-6.jpg";
+import rkStudioLogo from "@/assets/rk-studio-logo.jpg";
 
 interface Service {
   id: string;
@@ -118,22 +119,54 @@ export default function Index() {
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-background to-muted p-6">
-      <header className="max-w-6xl mx-auto flex items-center justify-between py-6">
-        <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-foreground">R.K STUDIO</h1>
-          <p className="text-sm text-muted-foreground">Frames, prints, shoots & restoration — made with ❤️</p>
+    <div className="min-h-screen bg-gradient-to-b from-background to-muted">
+      {/* Hero Section */}
+      <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary/10 to-accent/10 p-6">
+        <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-8">
+            <img 
+              src={rkStudioLogo} 
+              alt="R.K STUDIO Professional Photography" 
+              className="mx-auto w-full max-w-md rounded-2xl shadow-[var(--shadow-strong)] border border-border"
+            />
+          </div>
+          <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-foreground mb-4">
+            Welcome to R.K STUDIO
+          </h1>
+          <p className="text-xl text-muted-foreground mb-8">
+            Professional Photography • Frames • Prints • Restoration
+          </p>
+          <button
+            onClick={() => { window.scrollTo({ top: window.innerHeight, behavior: 'smooth' }); }}
+            className="px-8 py-4 bg-primary text-primary-foreground rounded-lg text-lg hover:bg-primary/90 transition-colors shadow-[var(--shadow-medium)]"
+          >
+            Explore Our Services
+          </button>
+        </div>
+      </section>
+
+      <header className="max-w-6xl mx-auto flex items-center justify-between py-6 px-6">
+        <div className="flex items-center gap-4">
+          <img 
+            src={rkStudioLogo} 
+            alt="R.K STUDIO Logo" 
+            className="w-16 h-16 rounded-lg shadow-md border border-border object-cover"
+          />
+          <div>
+            <h2 className="text-2xl font-extrabold tracking-tight text-foreground">R.K STUDIO</h2>
+            <p className="text-sm text-muted-foreground">Professional Photography Services</p>
+          </div>
         </div>
 
         <nav className="flex items-center gap-4">
           <button
-            onClick={() => { window.scrollTo({ top: 800, behavior: 'smooth' }); }}
+            onClick={() => { window.scrollTo({ top: window.innerHeight + 800, behavior: 'smooth' }); }}
             className="px-4 py-2 rounded-lg border border-border shadow-sm text-sm text-foreground hover:bg-secondary transition-colors"
           >
             Services
           </button>
           <button
-            onClick={() => { window.scrollTo({ top: 1400, behavior: 'smooth' }); }}
+            onClick={() => { window.scrollTo({ top: window.innerHeight + 1400, behavior: 'smooth' }); }}
             className="px-4 py-2 rounded-lg border border-border shadow-sm text-sm text-foreground hover:bg-secondary transition-colors"
           >
             Gallery
@@ -147,7 +180,7 @@ export default function Index() {
         </nav>
       </header>
 
-      <main className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6">
+      <main className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-6 px-6">
         <section className="md:col-span-2 bg-card rounded-2xl p-6 shadow-[var(--shadow-medium)] border border-border">
           <h2 className="text-2xl font-bold mb-4 text-card-foreground">Our Services</h2>
 
