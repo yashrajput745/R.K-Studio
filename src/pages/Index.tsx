@@ -121,7 +121,7 @@ export default function Index() {
     <div className="min-h-screen bg-gradient-to-b from-background to-muted p-6">
       <header className="max-w-6xl mx-auto flex items-center justify-between py-6">
         <div>
-          <h1 className="text-3xl font-extrabold tracking-tight text-foreground">Lovable Photo Studio</h1>
+          <h1 className="text-3xl font-extrabold tracking-tight text-foreground">R.K STUDIO</h1>
           <p className="text-sm text-muted-foreground">Frames, prints, shoots & restoration — made with ❤️</p>
         </div>
 
@@ -180,13 +180,13 @@ export default function Index() {
 
           <hr className="my-6 border-border" />
 
-          <h3 className="text-lg font-semibold mb-2 text-card-foreground">Lovable AI — Quick suggestions</h3>
+          <h3 className="text-lg font-semibold mb-2 text-card-foreground">R.K AI — Quick suggestions</h3>
           <p className="text-sm text-muted-foreground mb-2">Type what you want (e.g., "vintage portrait restoration", "frame for living room")</p>
           <div className="flex gap-2">
             <input
               value={aiPrompt}
               onChange={(e) => setAiPrompt(e.target.value)}
-              placeholder="Ask Lovable AI..."
+              placeholder="Ask R.K AI..."
               className="flex-1 border border-input rounded px-3 py-2 text-foreground bg-background focus:outline-none focus:ring-2 focus:ring-ring"
             />
             <button
@@ -400,7 +400,7 @@ export default function Index() {
       )}
 
       <footer className="max-w-6xl mx-auto mt-8 text-center text-muted-foreground text-sm">
-        © {new Date().getFullYear()} Lovable Photo Studio • Demo App
+        © {new Date().getFullYear()} R.K STUDIO • Demo App
       </footer>
     </div>
   );
