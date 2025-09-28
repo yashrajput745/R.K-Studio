@@ -38,7 +38,7 @@ export default function Index() {
       id: "prints-8x10",
       title: "8x10 Photo Print",
       desc: "High-quality glossy print on archival paper.",
-      price: 150,
+      price: 250,
       duration: "1 day",
       tag: "Print",
     },
