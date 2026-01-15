@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { toast } from "@/hooks/use-toast";
-import gallery1 from "@/assets/gallery-1.jpg";
-import gallery2 from "@/assets/gallery-2.jpg";
-import gallery3 from "@/assets/gallery-3.jpg";
-import gallery4 from "@/assets/gallery-4.jpg";
-import gallery5 from "@/assets/gallery-5.jpg";
-import gallery6 from "@/assets/gallery-6.jpg";
-import rkStudioLogo from "@/assets/rk-studio-logo.jpg";
+import { toast } from "sonner";
+import gallery1 from "../assets/gallery-1.jpg";
+import gallery2 from "../assets/gallery-2.jpg";
+import gallery3 from "../assets/gallery-3.jpg";
+import gallery4 from "../assets/gallery-4.jpg";
+import gallery5 from "../assets/gallery-5.jpg";
+import gallery6 from "../assets/gallery-6.jpg";
+import rkStudioLogo from "../assets/rk-studio-logo.jpg";
 
 interface Service {
   id: string;
@@ -89,10 +89,7 @@ export default function Index() {
 
   function addToCart(service: Service) {
     setCart((c) => [...c, { ...service, uid: Date.now() + Math.random() }]);
-    toast({
-      title: "Added to cart!",
-      description: `${service.title} has been added to your cart.`,
-    });
+    toast.success(`Added to cart: ${service.title}`);
   }
 
   function removeFromCart(uid: number) {
@@ -269,10 +266,7 @@ export default function Index() {
             <p className="text-sm text-muted-foreground">123 Studio Lane, YourCity</p>
             <p className="text-sm text-muted-foreground">Phone: +91 98765 43210</p>
             <button
-              onClick={() => toast({
-                title: "Contact form coming soon",
-                description: "We're working on a contact form. Please call us for now!",
-              })}
+              onClick={() => toast.info("Contact form coming soon. Please call us for now!")}
               className="mt-3 w-full px-3 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
             >Request Callback</button>
           </div>
@@ -317,10 +311,7 @@ export default function Index() {
                 addToCart(selectedService);
                 setShowBooking(false);
                 setSelectedService(null);
-                toast({
-                  title: `Thanks ${name}!`,
-                  description: `Service added to cart. We'll contact ${phone}.`,
-                });
+                toast(toast.success(`Thanks ${name}! We'll contact ${phone}.`));
               }}
               className="mt-4 space-y-3"
             >
@@ -410,10 +401,7 @@ export default function Index() {
                 <div className="mt-3 flex gap-2">
                   <button 
                     onClick={() => { 
-                      toast({
-                        title: "Checkout demo",
-                        description: "Integrate your payment gateway here.",
-                      }); 
+                      toast("Checkout demo — integrate payment gateway here."); 
                     }} 
                     className="px-4 py-2 bg-accent text-accent-foreground rounded hover:bg-accent/90 transition-colors"
                   >
