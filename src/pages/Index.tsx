@@ -263,8 +263,8 @@ export default function Index() {
 
           <div className="mt-6">
             <h4 className="font-semibold text-card-foreground">Contact</h4>
-            <p className="text-sm text-muted-foreground">Shop no.24,Opp.Mohan Anaj Bhandar,O.T Section,</p>
-            <p className="text-sm text-muted-foreground">Phone: +91 98765 43210</p>
+            <p className="text-sm text-muted-foreground">Shop no.24,Opp.Mohan Anaj Bhandar,O.T Section,Ulhasnagar-5,Dist-Thane</p>
+            <p className="text-sm text-muted-foreground">Phone: +91 9890346783</p>
             <button
               onClick={() => toast.info("Contact form coming soon. Please call us for now!")}
               className="mt-3 w-full px-3 py-2 rounded bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
