@@ -128,7 +128,7 @@ export default function Index() {
             />
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold tracking-tight text-foreground mb-4">
-            Welcome to R.K STUDIO
+            Welcome to R.K STUDIO 
           </h1>
           <p className="text-xl text-muted-foreground mb-8">
             Professional Photography • Frames • Prints • Restoration
