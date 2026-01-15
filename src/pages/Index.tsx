@@ -263,7 +263,7 @@ export default function Index() {
 
           <div className="mt-6">
             <h4 className="font-semibold text-card-foreground">Contact</h4>
-            <p className="text-sm text-muted-foreground">123 Studio Lane, YourCity</p>
+            <p className="text-sm text-muted-foreground">Shop no.24,Opp.Mohan Anaj Bhandar,O.T Section,</p>
             <p className="text-sm text-muted-foreground">Phone: +91 98765 43210</p>
             <button
               onClick={() => toast.info("Contact form coming soon. Please call us for now!")}
