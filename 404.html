@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>R.K Studio</title>
+    <script>
+      // Redirect SPA 404s to the base index.html
+      const path = window.location.pathname.replace(/\/$/, '');
+      const segments = path.split('/').filter(Boolean);
+      
+      // If the last segment doesn't have a dot (not a file), redirect to index with the path
+      if (segments.length > 0 && !segments[segments.length - 1].includes('.')) {
+        sessionStorage.redirect = path;
+        window.location.replace('/R.K-Studio/');
+      }
+    </script>
+  </head>
+  <body>
+    <script>
+      // This script handles the redirect after index.html loads
+      const redirect = sessionStorage.redirect;
+      delete sessionStorage.redirect;
+      if (redirect && redirect !== window.location.pathname) {
+        window.history.replaceState(null, null, redirect);
+      }
+    </script>
+  </body>
+</html>
